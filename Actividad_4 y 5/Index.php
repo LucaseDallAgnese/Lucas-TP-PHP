@@ -17,11 +17,11 @@ y lleva trabajando para nosotros AÑOS_TRABAJADOS Años".
     <section>
         <br>
         <form action="index.php" method="post">
+            <label>Escribe el nombre del trabajador:</label> <br>
+            <input type="text" required name="name" placeholder="Digite un texto"> <br>
             <label> Ingrese el monto de su sueldo. </label> <br>
             <input type="number" required  name="num1" placeholder="Digite el sueldo con numeros"> <br>
-            <label> Escribe el nombre del trabajador: </label> <br>
-            <input type="text" required name="name" placeholder="Digite un texto"> <br>
-            <label>Ingrese los años trabajados: </label>
+            <label>Ingrese los años trabajados: </label> <br>
             <input type="number" name="year" placeholder="Digite en numero"> <br>
             <input type="submit" value="Verificar">
         </form>
@@ -46,7 +46,7 @@ if ($sueldo >= 320000 && $sueldo <= 500000) {
 }
 $nuevoSueldo = $sueldo + $aumento;
 echo "El Señor: " , $name;
-echo "Con un sueldo de: $ " . number_format($sueldo, 0, ',', '.') . " y su aumento es: $" . number_format($nuevoSueldo, 0, ',', '.');
+echo " Con un sueldo de: $" . number_format($sueldo, 0, ',', '.') . " y su aumento es: $" . number_format($nuevoSueldo, 0, ',', '.');
 echo " lleva trabajando para nosotros $years Años. <br>" ; 
 
 if ($years >= 10 && $years <= 15 && $sueldo <350000 ){ 
